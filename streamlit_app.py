@@ -16,6 +16,6 @@ fruits = pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/frui
 fruits = fruits.set_index('Fruit') # so that the index of the fruit list makes sense when the readers read
 
 # ability to pick a list so that user can pick the fruit that they want to include
-sl.multiselect("Pick some fruits:", list(fruits.index), ['Avocado','Strawberries'])
-
-sl.dataframe(fruits) # display the table on the page
+fruits_selected = sl.multiselect("Pick some fruits:", list(fruits.index), ['Avocado','Strawberries'])
+fruits_to_show = fruits.loc[fruits_selected]
+sl.dataframe(fruits_to_show) # display the table on the page
