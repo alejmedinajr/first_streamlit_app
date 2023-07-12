@@ -12,4 +12,7 @@ sl.text('🥑🍞 Avocado Toast')
 sl.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇') # smoothie header
  
 fruits = pd.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt')
-sl.dataframe(fruits)
+# ability to pick a list so that user can pick the fruit that they want to include
+sl.multiselect("Pick some fruits:", list(fruits.index))
+
+sl.dataframe(fruits) # display the table on the page
