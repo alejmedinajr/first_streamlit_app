@@ -8,5 +8,5 @@ sl.text('🥗 Kale, Spinach & Rocket Smoothie')
 sl.text(' 🐔 Hard-Boiled Free-Range Egg')
 sl.text('🥑🍞 Avocado Toast')
 
-streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇') # smoothie header
+sl.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇') # smoothie header
  
